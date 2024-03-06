@@ -25,17 +25,33 @@ namespace ScreenManagerV3
             VirtualScreen.Draw();
 
             // Main loop develop here
-            while (true)
+            bool on = true;
+            while (on)
             {
                 ConsoleKey key = Console.ReadKey(false).Key;
-                if (key == ConsoleKey.Q)
+
+                switch (key)
                 {
-                    break;
+                    case (ConsoleKey.RightArrow):
+                        AreaHandler.curArea++;
+                        break;
+
+                    case (ConsoleKey.LeftArrow):
+                        AreaHandler.curArea--;
+                        break;
+
+                    case (ConsoleKey.Q):
+                        on = false;
+                        break;
+
+                    default: // random key just change windows
+                        mWin1.IsVisible = !mWin1.IsVisible;
+
+                        dWin1.IsVisible = !dWin1.IsVisible;
+
+                        AreaHandler.curArea = -1;
+                        break;
                 }
-
-                mWin1.IsVisible = !mWin1.IsVisible;
-
-                dWin1.IsVisible = !dWin1.IsVisible;
 
                 VirtualScreen.Draw();
             }

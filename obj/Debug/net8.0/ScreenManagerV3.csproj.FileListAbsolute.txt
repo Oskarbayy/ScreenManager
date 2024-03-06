@@ -12,3 +12,4 @@ C:\Users\zbc23obbh\source\repos\ScreenManagerV3\ScreenManagerV3\obj\Debug\net8.0
 C:\Users\zbc23obbh\source\repos\ScreenManagerV3\ScreenManagerV3\obj\Debug\net8.0\ScreenManagerV3.pdb
 C:\Users\zbc23obbh\source\repos\ScreenManagerV3\ScreenManagerV3\obj\Debug\net8.0\ScreenManagerV3.genruntimeconfig.cache
 C:\Users\zbc23obbh\source\repos\ScreenManagerV3\ScreenManagerV3\obj\Debug\net8.0\ref\ScreenManagerV3.dll
+C:\Users\zbc23obbh\source\repos\ScreenManagerV3\ScreenManagerV3\obj\Debug\net8.0\ScreenManagerV3.sourcelink.json

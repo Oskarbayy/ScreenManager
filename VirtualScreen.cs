@@ -58,12 +58,29 @@ namespace ScreenManagerV3
             Console.CursorVisible = false;
             Console.SetCursorPosition(0, 0);
 
+            //
+
+            Area? CurrentArea = AreaHandler.GetCurArea();
+            Debug.WriteLine(AreaHandler.curArea);
+
+
             for (int y = 0; y < Height; y++)
             {
                 for (int x = 0; x < Width; x++)
                 {
+
+                    bool inX = CurrentArea != null && x >= CurrentArea.TopLeft.X && x < CurrentArea.BottomRight.X;
+                    bool inY = CurrentArea != null && y >= CurrentArea.TopLeft.Y && y < CurrentArea.BottomRight.Y;
+
+                    if (inY && inX)
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    else
+                        Console.ResetColor();
+
                     Console.Write(buffer[x, y]);
                 }
+
+                Console.ResetColor();
 
                 if (y < Height - 1)
                     Console.WriteLine();

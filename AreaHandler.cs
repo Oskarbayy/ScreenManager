@@ -34,10 +34,20 @@ namespace ScreenManagerV3
     internal class AreaHandler
     {
         static List<Area> areas  = new List<Area>();
-
+        static public int curArea = -1;
         public static void AddArea(Position topL, Position bottomR)
         {
             areas.Add(new Area(topL, bottomR));
+        }
+
+        public static Area? GetCurArea()
+        {
+            if (curArea >= 0 && curArea < areas.Count)
+            {
+                return areas[curArea];
+            }
+
+            return null;
         }
 
         public static void CheckAreas()
@@ -51,6 +61,7 @@ namespace ScreenManagerV3
         public static void ClearAreas()
         {
             areas.Clear();
+            // curArea = -1;
         }
     }
 }
